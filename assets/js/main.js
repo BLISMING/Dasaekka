@@ -71,38 +71,7 @@
     })
   }
 
-  /**
-   * Back to top button*/
-   let backtotop = document.querySelector('.back-to-top');
-
-if (backtotop) {
-    const toggleBacktotop = () => {
-        if (window.scrollY > 100) {
-            backtotop.classList.add('active');
-        } else {
-            backtotop.classList.remove('active');
-        }
-    };
-
-    window.addEventListener('scroll', toggleBacktotop);
-
-    // Fungsi untuk menggulir halaman dengan efek yang halus
-    const scrollToTop = () => {
-        const scrollDuration = 500; // Durasi animasi (dalam milidetik)
-        const scrollStep = -window.scrollY / (scrollDuration / 15);
-        const scrollInterval = setInterval(() => {
-            if (window.scrollY !== 0) {
-                window.scrollBy(0, scrollStep);
-            } else {
-                clearInterval(scrollInterval);
-            }
-        }, 15);
-    };
-
-    backtotop.addEventListener('click', scrollToTop);
-}
-
-   
+  
 
  
 
